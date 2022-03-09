@@ -16,6 +16,6 @@ public class Function
     /// <returns></returns>
     public string FunctionHandler(InputType input, ILambdaContext context)
     {
-        return $"Olá {input.Nome.ToUpper()}!";
+        return $"Olá {input?.Nome?.ToUpper()}!";
     }
 }

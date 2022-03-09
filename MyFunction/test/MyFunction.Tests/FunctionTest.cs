@@ -16,4 +16,16 @@ public class FunctionTest
 
         Assert.Equal("Olá NETO!", upperCase);
     }
+
+    [Fact]
+    public void ShouldAvoidNullReferenceException()
+    {
+
+        // Invoke the lambda function and confirm the string was upper cased.
+        var function = new Function();
+        var context = new TestLambdaContext();
+        var upperCase = function.FunctionHandler(null, context);
+
+        Assert.Equal("Olá !", upperCase);
+    }
 }
