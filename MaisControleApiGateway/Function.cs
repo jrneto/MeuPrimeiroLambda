@@ -10,9 +10,25 @@ namespace MaisControleApiGateway;
 public class Function
 {
 
-    public APIGatewayProxyResponse FunctionHandler(ILambdaContext context)
+    public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest request, ILambdaContext context)
     {
         LambdaLogger.Log("Início execução\n");
+
+        string id = String.Empty;
+
+        if (request != null)
+        {
+            id = request.QueryStringParameters?.FirstOrDefault(x => x.Key == "id").Value ?? "0";
+
+            if (!int.TryParse(id, out _))
+            {
+                return new APIGatewayProxyResponse
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    Body = "O parâmetro id só aceita valores numéricos. Id informado: " + id
+                };
+            }
+        }
 
         var response = new APIGatewayProxyResponse
         {
@@ -20,7 +36,8 @@ public class Function
             Body = "Olá! A hora atual é: " + DateTime.Now.ToString("hh:mm:ss") + "\n" +
                    "FunctionName: " + context.FunctionName + "\n" +
                    "AwsRequestId: " + context.AwsRequestId + "\n" +
-                   "FunctionVersion: " + context.FunctionVersion,
+                   "FunctionVersion: " + context.FunctionVersion + "\n" +
+                   "id: " + id,
             Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
         };
 
