@@ -36,3 +36,4 @@ sam build
 sam local invoke "HelloWorldFunction"
 ```
 - O json retornado pela função é escrito no próprio terminal
+![RetornoLambda](https://user-images.githubusercontent.com/44115369/158994584-677cbeb4-6bcb-4620-997b-80ba308f57b2.png)
