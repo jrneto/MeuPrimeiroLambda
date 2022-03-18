@@ -23,9 +23,9 @@ sam local invoke "HelloWorldFunction"
 - Note que ocorrerá o seguinte erro:
 ```bash
 Error: ImageUri not provided for Function: HelloWorldFunction of PackageType: Image
-``
+```
 - Este erro ocorre pois é preciso informar a URI da imagem docker que utilizaremos como base para rodar nossa função. No arquivo template.yaml na sessão resources acrescente o ImagemUri conforme abaixo: 
-    - ImageUri: 123456789012.dkr.ecr.eu-west-1.amazonaws.com/function:latest
+- ImageUri: 123456789012.dkr.ecr.eu-west-1.amazonaws.com/function:latest
 - Agora faça o build através do comando abaixo:
 ```bash
 sam build
