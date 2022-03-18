@@ -26,6 +26,7 @@ Error: ImageUri not provided for Function: HelloWorldFunction of PackageType: Im
 ```
 - Este erro ocorre pois é preciso informar a URI da imagem docker que utilizaremos como base para rodar nossa função. No arquivo template.yaml na sessão resources acrescente o ImagemUri conforme abaixo: 
 - ImageUri: 123456789012.dkr.ecr.eu-west-1.amazonaws.com/function:latest
+![ImageUri](https://user-images.githubusercontent.com/44115369/158993429-1bf418ff-cb15-4b7e-a8f0-f59b209584b2.png)
 - Agora faça o build através do comando abaixo:
 ```bash
 sam build
