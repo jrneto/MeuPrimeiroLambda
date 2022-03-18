@@ -5,8 +5,10 @@
     "dotnet lambda help",
     "All the command line options for the Lambda command can be specified in this file."
   ],
-  "profile": "",
-  "region": "",
+  "profile": "default",
+  "region": "us-east-1",
   "configuration": "Release",
-  "template": "template.yaml"
+  "function-memory-size": 128,
+  "function-timeout": 5,
+  "function-handler": "HelloWorld::HelloWorld.Function::FunctionHandler"
 }

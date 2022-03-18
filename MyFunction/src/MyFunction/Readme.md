@@ -1,6 +1,8 @@
 # Created follow this steps:
 * https://docs.aws.amazon.com/pt_br/lambda/latest/dg/csharp-package-cli.html
 
+  dotnet lambda deploy-function MyFunction --function-role role
+
 # AWS Lambda Empty Function Project
 
 This starter project consists of:
