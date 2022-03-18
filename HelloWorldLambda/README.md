@@ -35,3 +35,4 @@ sam build
 ```bash
 sam local invoke "HelloWorldFunction"
 ```
+- O json retornado pela função é escrito no próprio terminal
