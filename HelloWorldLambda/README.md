@@ -1,4 +1,4 @@
-# HelloWorldLambda function com .Net core 6
+# HelloWorldLambda function com .Net core 5
 
 Neste exemplo vamos criar uma HellowWorldLambda através do SAM CLI e executar localmente.
 
@@ -10,7 +10,7 @@ sam init
 - Escolha a opção 1 - AWS Quick Start Template.
 - Escolha o template 1 - Hello World Example
 - Você será questionado se quer usar python, apenas informe "N" e dê um enter.
-- Escolha a opção 1 para selecionar o runtime dotnet6
+- Escolha a opção 2 para selecionar o runtime dotnet5
 - Escolha a opção 2 - Image. Pois vamos rodar o nosso lambda dentro de um container.
 - Por último informe o nome do seu projeto.
 
