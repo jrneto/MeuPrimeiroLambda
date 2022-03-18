@@ -1,4 +1,4 @@
-# Desenvolvendo lambda Functions com .net core 6
+# Desenvolvendo lambda Functions com .net core
 
 O objetivo deste repositório é compartilhar meu aprendizado estudando sobre a criação de funções lambdas na AWS utilizando .net core 6.
 
