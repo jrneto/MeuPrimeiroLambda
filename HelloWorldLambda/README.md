@@ -3,7 +3,7 @@
 Neste exemplo vamos criar uma HellowWorldLambda através do SAM CLI e executar localmente.
 
 # Criação do lamdba com AWS CLI
-- Abra o windows terminal e vá para a pasta onde deseja criar função.
+- Abra o windows terminal e vá para a pasta onde deseja criar função e execute o comando abaixo
 ```bash
 sam init
 ```
