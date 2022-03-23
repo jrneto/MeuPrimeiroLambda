@@ -37,3 +37,13 @@ sam local invoke "HelloWorldFunction"
 ```
 - O json retornado pela função é escrito no próprio terminal
 ![RetornoLambda](https://user-images.githubusercontent.com/44115369/158994584-677cbeb4-6bcb-4620-997b-80ba308f57b2.png)
+
+- Também é possível simular outros tipos de entrada de dados para o nosso lambda. Para isso basta alterar o event.json na pasta events de acordo com sua necessidade. 
+```bash
+sam local invoke "HelloWorldFunction" -e .\events\event.json 
+```
+- Para subir o gateway localmente execute o comando abaixo
+```bash
+sam local start-api
+```
+- Agora basta chamar a API através da URL http://127.0.0.1:3000/hello

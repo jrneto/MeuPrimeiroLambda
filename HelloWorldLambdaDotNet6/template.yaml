@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  Sample SAM Template for HelloWorldLambda
+  Sample SAM Template for HelloWorldLambdaDotNet6
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -15,18 +15,13 @@ Resources:
       PackageType: Image
       ImageUri: 123456789012.dkr.ecr.eu-west-1.amazonaws.com/function:latest
       Events:
-        HelloWorldGet:
+        HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
             Path: /hello
             Method: get
-        HelloWorldPost:
-          Type: Api 
-          Properties:
-            Path: /hello
-            Method: post
     Metadata:
-      DockerTag: dotnet5.0-v1
+      DockerTag: dotnet6-v1
       DockerContext: ./src/HelloWorld
       Dockerfile: Dockerfile
       DockerBuildArgs:

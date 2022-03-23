@@ -1,5 +1,5 @@
 {
-    "body": "{\"message\": \"hello world event\"}",
+    "body": "{\"message\": \"hello world\"}",
     "resource": "/{proxy+}",
     "path": "/path/to/resource",
     "httpMethod": "POST",
