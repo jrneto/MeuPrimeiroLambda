@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "HelloWorldFunctionStack"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-eanle2y77wg9"
+s3_prefix = "HelloWorldFunctionStack"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = ["HelloWorldFunction=648443184523.dkr.ecr.us-east-1.amazonaws.com/helloworldfunctionstack4be2bad1/helloworldfunction19d43fc4repo"]

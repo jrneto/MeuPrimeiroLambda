@@ -2,15 +2,94 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "type": "coreclr",
-        "request": "attach",
-        "name": "Attach to SAM CLI",
-        "address": "localhost",
-        "port": 3000,
-        "localRoot": "${workspaceRoot}/src",
-        "remoteRoot": "/var/task",
-        "protocol": "inspector",
-        "stopOnEntry": false
+        "type": "aws-sam",
+        "request": "direct-invoke",
+        "name": "API HelloWorldLambda:HelloWorldFunction (dotnet6)",
+        "invokeTarget": {
+          "target": "api",
+          "templatePath": "${workspaceFolder}/HelloWorldLambda/template.yaml",
+          "logicalId": "HelloWorldFunction"
+        },
+        "api": {
+          "path": "/",
+          "httpMethod": "get",
+          "payload": {
+            "json": {}
+          }
+        },
+        "lambda": {
+          "runtime": "dotnet6"
+        }
+      },
+      {
+        "type": "aws-sam",
+        "request": "direct-invoke",
+        "name": "HelloWorldLambda:HelloWorldFunction (dotnet6)",
+        "invokeTarget": {
+          "target": "template",
+          "templatePath": "${workspaceFolder}/HelloWorldLambda/template.yaml",
+          "logicalId": "HelloWorldFunction"
+        },
+        "lambda": {
+          "payload": {},
+          "environmentVariables": {},
+          "runtime": "dotnet6"
+        }
+      },
+      {
+        "type": "aws-sam",
+        "request": "direct-invoke",
+        "name": "API HelloWorldLambda:HelloWorldFunction (dotnet6)",
+        "invokeTarget": {
+          "target": "api",
+          "templatePath": "${workspaceFolder}/HelloWorldLambda/template.yaml",
+          "logicalId": "HelloWorldFunction"
+        },
+        "api": {
+          "path": "/hello",
+          "httpMethod": "post",
+          "payload": {
+            "json": {}
+          }
+        },
+        "lambda": {
+          "runtime": "dotnet6"
+        }
+      },
+      {
+        "type": "aws-sam",
+        "request": "direct-invoke",
+        "name": "API HelloWorldLambda:HelloWorldFunction (dotnet6)",
+        "invokeTarget": {
+          "target": "api",
+          "templatePath": "${workspaceFolder}/HelloWorldLambda/template.yaml",
+          "logicalId": "HelloWorldFunction"
+        },
+        "api": {
+          "path": "/hello",
+          "httpMethod": "get",
+          "payload": {
+            "json": {}
+          }
+        },
+        "lambda": {
+          "runtime": "dotnet6"
+        }
+      },
+      {
+        "type": "aws-sam",
+        "request": "direct-invoke",
+        "name": "HelloWorldLambda:HelloWorldFunction (dotnet6)",
+        "invokeTarget": {
+          "target": "template",
+          "templatePath": "${workspaceFolder}/HelloWorldLambda/template.yaml",
+          "logicalId": "HelloWorldFunction"
+        },
+        "lambda": {
+          "payload": {},
+          "environmentVariables": {},
+          "runtime": "dotnet6"
+        }
       }
     ]
   }
